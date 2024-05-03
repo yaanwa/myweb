@@ -4,13 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Josefin Sans',sans-serif;
-        
+    
 }
 
 body{
     background: url('./background/background.png') no-repeat;
     background-size: cover;
+    font-family:'Josefin Sans',sans-serif;
 }
 
 header {
@@ -39,6 +39,7 @@ header {
     text-decoration: none;
     margin-left: 25px;
     font-weight: 700;
+    font-size: sans-serif;
 }
 
 .navigation>a:hover::after{
@@ -48,9 +49,8 @@ header {
 
 .navigation>a::after{
     width: 114%;
-    height: 3px;
+    height: 3.5px;
     content: '';
-    border-radius: 15px;
     position: absolute;
     bottom: -3px;
     left: -6.2%;
