@@ -14,6 +14,7 @@ body{
 }
 
 header {
+    user-select: none;
     position: fixed;
     width: 100%;
     height: 75px;
@@ -28,7 +29,6 @@ header {
 }
 
 .logo {
-    user-select: none;
     color: #fff;
     font-size: 2em;
 }
@@ -61,6 +61,7 @@ header {
 }
 
 .home{
+    user-select: none;
     padding: 25px;
     width: 500px;
     height: 500px;
