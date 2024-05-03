@@ -8,9 +8,15 @@
 }
 
 body{
-    background: url('./background/background.png') no-repeat;
     background-size: cover;
     font-family:'Josefin Sans',sans-serif;
+    background: url('./background/background.png');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    min-width: 300px;
+
 }
 
 header {
@@ -189,4 +195,9 @@ header {
     right: 0;
 }
 
-
+@media (max-width:768px) {
+    .music{
+        width: 75%;
+        right: -478px;
+    }
+}
