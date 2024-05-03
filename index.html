@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tired</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">ya_anwa</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="home">
+        <h2>Hello，歡迎來到我的<br>精神空間</h2>
+        <hr>
+        <p style="margin-top: 20px;">一名深陷對OK繃依賴的拖延症患者，已進入末期階段，難以自拔，生活彷彿被黏在時間的黏著劑中。</p>
+        <a href="#" class="cta">
+            <span>關於我</span>
+            <svg width="20px" height="16px" viewBox="0 0 13 11">
+                <polyline points="4 1 12 6 4 11"></polyline>
+            </svg>
+        </a>
+    </div>
+    <div class="music">
+        <img src="./background/500x500.jpg" alt="shelter">
+        <ion-icon name="chevron-back-outline" class="open"></ion-icon>
+        <marquee>Porter Robinson & Madeon — shelter</marquee>
+        <div id="icon">
+            <ion-icon name="play-circle-outline" id="ion-icon"></ion-icon>
+        </div>
+        <audio id="mysong">
+            <source src="Shelter.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script>
+        gsap.from('.home', 1.2, { opacity: 0, x: -200, delay: 0.5 })
+        gsap.from('.home h2', 1.2, { opacity: 0, x: -200, delay: 1 })
+        gsap.from('.home p', 2.3, { opacity: -20, delay: 0 })
+        gsap.from('header', 1.2, { opacity: 0, y: -100, delay: 0.5 })
+        gsap.from('.navigation', 2, { opacity: 5, y: -50, delay: 0.5 })
+
+        var mysong = document.getElementById("mysong")
+        let strat = function () {
+            if(mysong.paused){
+                mysong.play();
+                mysong.volume = 0.5
+                icon.innerHTML = `<ion-icon name="pause-circle-outline" id="ion-icon"></ion-icon>`;
+                
+            }else{
+                mysong.pause();
+                icon.innerHTML = `<ion-icon name="play-circle-outline" id="ion-icon"></ion-icon>`;
+            }
+            icon1 = document.querySelector("#icon>ion-icon").addEventListener('click' , strat)
+        }
+        let icon1 = document.querySelector("#icon>ion-icon").addEventListener('click', strat)
+
+        let music = document.querySelector('.music')
+        let open = document.querySelector('.open')
+        open.onclick = function () {
+            music.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>

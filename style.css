@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@700&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+HK:wght@100..900&family=Poppins:wght@700&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=ZCOOL+KuaiLe&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Josefin Sans',sans-serif;
+        
+}
+
+body{
+    background: url('./background/background.png') no-repeat;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    padding: 20px 100px;
+    background-color: #bbbbbb6e; /* 六位數的為半透明 */
+    font-size: 20px;
+    /* background: hsla(0, 0%, 50%, 0.3); 色相,飽和,明度,透明 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    user-select: none;
+    color: #fff;
+    font-size: 2em;
+}
+
+.navigation a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 700;
+}
+
+.navigation>a:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.navigation>a::after{
+    width: 114%;
+    height: 3px;
+    content: '';
+    border-radius: 15px;
+    position: absolute;
+    bottom: -3px;
+    left: -6.2%;
+    background: #dcc1c1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.5s;
+}
+
+.home{
+    padding: 25px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #efd6d69d;
+    position: absolute;
+    display: grid;
+    top: 20%;
+    left: 8%;
+    color: #343434;
+    align-content: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.home>h2{
+    width: 300px;
+    padding-bottom: 6px;
+}
+
+.home>.cta{
+    width: max-content;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #343434;
+    position: absolute;
+    top: 75%;
+    right: 2%;
+    font-weight: 600;
+    
+}
+
+
+.home>.cta>span,svg{
+    position: relative;
+    z-index: 99;
+}
+
+
+.home>.cta:hover::after{
+    background: #edb8b8;
+    width: 100%;
+    transform-origin: left;
+}
+
+.home>.cta::after{
+    display: block;
+    width: 56px;
+    height: 56px;
+    content: '';
+    background: #fff;
+    border-radius:28px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #caaeae;
+    transition: .5s;
+}
+
+.home>.cta>svg{
+    position: relative;
+    top: 0;
+    margin-left: 3px;
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 2;
+    transform: translateX(-8px);
+    transition: all 0.8s ease;
+}
+
+.home>.cta:hover svg{
+    transform: translateX(0);
+}
+
+.music{
+    position: fixed;
+    /* position: absolute; */
+    content: '';
+    bottom: 0;
+    right: -570px;
+    margin: 50px;
+    width: 500px;
+    height: 125px;
+    border-radius: 45px;
+    border: 3px solid#131313d0;
+    background-color: #0c0c0cab;
+    font-size: 25px;
+    transition: 1s;
+}
+
+.music img{
+    width: 30%;
+    padding: 30px;
+    position: absolute;
+    top: -10%;
+    left: 2%;
+}
+
+.music ion-icon{
+    position: absolute;
+    font-size: 50px;
+    right: 36%;
+    cursor: pointer;
+}
+
+.music marquee{
+    margin: 5% 10% auto 33%
+}
+.music>.open{
+    width: 100px;
+    position: absolute;
+    left: -20%;
+    top: 25%;
+    color: #fff;
+    transform: translateX(1px);
+    transition: .5s;
+}
+
+.music>.open:hover{
+    transform: translateX(-30px);
+}
+
+.music.active{
+    transition: 1s;
+    right: 0;
+}
+
+
